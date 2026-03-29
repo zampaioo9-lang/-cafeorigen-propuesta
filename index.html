@@ -282,6 +282,189 @@
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50% { transform: translateX(-50%) translateY(6px); }
     }
+
+    /* PROBLEMA */
+    #problema {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .problema-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 56px;
+    }
+    .problema-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+    .problema-card:hover { border-color: var(--gold); }
+    .problema-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .problema-card h3 {
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+    .problema-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* SOLUCIÓN */
+    #solucion {
+      position: relative;
+    }
+    .solucion-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 64px;
+    }
+    .solucion-intro .section-subtitle {
+      margin: 0 auto;
+    }
+    .modulos-map {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px 32px;
+      overflow: hidden;
+    }
+    .modulos-map svg {
+      width: 100%;
+      height: auto;
+      max-width: 900px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* MÓDULOS */
+    #modulos { background: var(--surface); border-top: 1px solid var(--border); }
+    .modulos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+      gap: 16px;
+      margin-top: 56px;
+    }
+    @media (max-width: 600px) {
+      .modulos-grid { grid-template-columns: 1fr; }
+    }
+    .modulo-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.3s;
+      cursor: pointer;
+    }
+    .modulo-card:hover { border-color: var(--gold); }
+    .modulo-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 24px;
+    }
+    .modulo-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      opacity: 0.4;
+      min-width: 36px;
+    }
+    .modulo-info { flex: 1; }
+    .modulo-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+    .modulo-tagline { font-size: 0.82rem; color: var(--muted); }
+    .modulo-badges {
+      display: flex;
+      gap: 8px;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .badge {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .badge-alto   { background: rgba(46,107,79,0.25);  color: #6bcf9e; border: 1px solid rgba(46,107,79,0.5); }
+    .badge-medio  { background: rgba(74,48,112,0.25);  color: #b899e8; border: 1px solid rgba(74,48,112,0.5); }
+    .badge-baja   { background: rgba(44,74,122,0.25);  color: #7aaaf0; border: 1px solid rgba(44,74,122,0.5); }
+    .badge-media  { background: rgba(139,58,58,0.25);  color: #f09090; border: 1px solid rgba(139,58,58,0.5); }
+    .badge-visible { background: rgba(92,107,46,0.25); color: #c5d97e; border: 1px solid rgba(92,107,46,0.5); }
+    .modulo-chevron {
+      color: var(--muted);
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+      padding-left: 8px;
+    }
+    .modulo-card.open .modulo-chevron { transform: rotate(180deg); }
+    .modulo-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .modulo-card.open .modulo-body { max-height: 400px; }
+    .modulo-body-inner {
+      padding: 0 24px 24px;
+      border-top: 1px solid var(--border);
+    }
+    .modulo-body-inner ul {
+      list-style: none;
+      margin: 16px 0;
+    }
+    .modulo-body-inner ul li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .modulo-body-inner ul li::before {
+      content: '→';
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .modulo-beneficia {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 16px 0;
+    }
+    .beneficia-tag {
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: var(--surface2);
+      color: var(--muted);
+    }
+    .modulo-precio {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-top: 16px;
+    }
+    .modulo-precio span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
@@ -387,6 +570,331 @@
     <div class="scroll-indicator">Explorar</div>
   </section>
 
+  <section id="problema" class="section">
+    <div class="container">
+      <p class="section-label fade-up">El reto actual</p>
+      <h2 class="section-title fade-up">¿Qué pasa sin un sistema?</h2>
+      <div class="divider fade-up"></div>
+      <p class="section-subtitle fade-up">Gestionar 2 o 3 sucursales sin herramientas digitales significa trabajar el doble para obtener la mitad de la información.</p>
+      <div class="problema-grid">
+        <div class="problema-card fade-up">
+          <span class="problema-icon">📊</span>
+          <h3>Sin visibilidad entre sucursales</h3>
+          <p>No sabes cuánto vendió cada caja hoy, qué empleado llegó tarde ni cuál sucursal tiene menor rendimiento — a menos que vayas en persona.</p>
+        </div>
+        <div class="problema-card fade-up">
+          <span class="problema-icon">📦</span>
+          <h3>Inventario gestionado a ojo</h3>
+          <p>Los pedidos se hacen por intuición. Las mermas no se registran. El café se acaba en viernes a las 10am y no hay forma de haberlo predicho.</p>
+        </div>
+        <div class="problema-card fade-up">
+          <span class="problema-icon">🌐</span>
+          <h3>Sin presencia digital unificada</h3>
+          <p>Tus clientes buscan tu menú en Google y no encuentran nada. No hay forma de que conozcan tus 3 sucursales ni de que vuelvan con un incentivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucion" class="section">
+    <div class="container">
+      <div class="solucion-intro fade-up">
+        <p class="section-label">La propuesta</p>
+        <h2 class="section-title">7 módulos, un solo ecosistema</h2>
+        <div class="divider" style="margin:24px auto;"></div>
+        <p class="section-subtitle">Cada módulo funciona solo, pero juntos forman un sistema que cubre toda la operación de tu cadena.</p>
+      </div>
+      <div class="modulos-map fade-up">
+        <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+          <!-- Líneas de conexión -->
+          <line x1="450" y1="100" x2="180" y2="200" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+          <line x1="450" y1="100" x2="450" y2="200" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+          <line x1="450" y1="100" x2="720" y2="200" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+          <line x1="180" y1="260" x2="180" y2="360" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+          <line x1="450" y1="260" x2="310" y2="360" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+          <line x1="450" y1="260" x2="590" y2="360" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+          <line x1="720" y1="260" x2="720" y2="360" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4,4" opacity="0.3"/>
+
+          <!-- Nodo central: Dashboard -->
+          <rect x="340" y="50" width="220" height="70" rx="10" fill="#1a3a1a" stroke="#C9A84C" stroke-width="2"/>
+          <text x="450" y="78" text-anchor="middle" fill="#C9A84C" font-size="11" font-weight="600" letter-spacing="1">① DASHBOARD</text>
+          <text x="450" y="96" text-anchor="middle" fill="#888" font-size="9.5">Multi-sucursal · Tiempo real</text>
+          <text x="450" y="112" text-anchor="middle" fill="#C9A84C" font-size="8.5">$4,500/mes</text>
+
+          <!-- Nodo 2: Checklist -->
+          <rect x="70" y="190" width="220" height="70" rx="10" fill="#1a1a3a" stroke="#4466aa" stroke-width="1.5"/>
+          <text x="180" y="218" text-anchor="middle" fill="#8899cc" font-size="11" font-weight="600" letter-spacing="1">② CHECKLIST</text>
+          <text x="180" y="236" text-anchor="middle" fill="#888" font-size="9.5">Operativo diario</text>
+          <text x="180" y="252" text-anchor="middle" fill="#8899cc" font-size="8.5">$1,200/mes</text>
+
+          <!-- Nodo 3: Inventario -->
+          <rect x="340" y="190" width="220" height="70" rx="10" fill="#2a1a0a" stroke="#aa6633" stroke-width="1.5"/>
+          <text x="450" y="218" text-anchor="middle" fill="#cc8855" font-size="11" font-weight="600" letter-spacing="1">③ INVENTARIO</text>
+          <text x="450" y="236" text-anchor="middle" fill="#888" font-size="9.5">Stock mínimo · Alertas</text>
+          <text x="450" y="252" text-anchor="middle" fill="#cc8855" font-size="8.5">$2,800/mes</text>
+
+          <!-- Nodo 7: Sitio web (ESTRELLA) -->
+          <rect x="610" y="185" width="220" height="80" rx="10" fill="#2a1505" stroke="#C9A84C" stroke-width="2.5"/>
+          <text x="720" y="211" text-anchor="middle" fill="#C9A84C" font-size="10" font-weight="700" letter-spacing="1">⭐ SITIO WEB</text>
+          <text x="720" y="229" text-anchor="middle" fill="#888" font-size="9.5">Productos · Sucursales · Galería</text>
+          <text x="720" y="247" text-anchor="middle" fill="#C9A84C" font-size="8.5">$3,500 setup + $800/mes</text>
+
+          <!-- Nodo 4: Lealtad -->
+          <rect x="70" y="350" width="200" height="70" rx="10" fill="#1a0a2a" stroke="#7744aa" stroke-width="1.5"/>
+          <text x="170" y="378" text-anchor="middle" fill="#aa77cc" font-size="11" font-weight="600" letter-spacing="1">④ LEALTAD</text>
+          <text x="170" y="396" text-anchor="middle" fill="#888" font-size="9.5">Puntos · Recompensas</text>
+          <text x="170" y="412" text-anchor="middle" fill="#aa77cc" font-size="8.5">$2,200/mes</text>
+
+          <!-- Nodo 5: Turnos -->
+          <rect x="300" y="350" width="200" height="70" rx="10" fill="#0a2a1a" stroke="#44aa77" stroke-width="1.5"/>
+          <text x="400" y="378" text-anchor="middle" fill="#66cc99" font-size="11" font-weight="600" letter-spacing="1">⑤ TURNOS</text>
+          <text x="400" y="396" text-anchor="middle" fill="#888" font-size="9.5">Horarios · Ausencias</text>
+          <text x="400" y="412" text-anchor="middle" fill="#66cc99" font-size="8.5">$1,500/mes</text>
+
+          <!-- Nodo 6: Menú QR -->
+          <rect x="530" y="350" width="200" height="70" rx="10" fill="#2a1a0a" stroke="#aa8833" stroke-width="1.5"/>
+          <text x="630" y="378" text-anchor="middle" fill="#ccaa55" font-size="11" font-weight="600" letter-spacing="1">⑥ MENÚ QR</text>
+          <text x="630" y="396" text-anchor="middle" fill="#888" font-size="9.5">Digital · Sin impresión</text>
+          <text x="630" y="412" text-anchor="middle" fill="#ccaa55" font-size="8.5">$900/mes</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="modulos" class="section">
+    <div class="container">
+      <p class="section-label fade-up">El sistema</p>
+      <h2 class="section-title fade-up">Los 7 módulos</h2>
+      <div class="divider fade-up"></div>
+      <p class="section-subtitle fade-up">Haz clic en cada módulo para ver el detalle completo.</p>
+
+      <div class="modulos-grid">
+
+        <!-- Módulo 1 -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)">
+          <div class="modulo-header">
+            <span class="modulo-num">01</span>
+            <div class="modulo-info">
+              <div class="modulo-title">Dashboard Multi-Sucursal</div>
+              <div class="modulo-tagline">Ventas, caja y empleados en tiempo real</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-alto">Impacto Alto</span>
+              <span class="badge badge-media">Complejidad Media</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Ventas en tiempo real por sucursal y por empleado</li>
+                <li>Comparativas diarias, semanales y mensuales entre tiendas</li>
+                <li>Alertas cuando el corte de caja no cuadra</li>
+                <li>Registro de asistencia y puntualidad del equipo</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">👤 Dueño</span>
+                <span class="beneficia-tag">📋 Gerente</span>
+              </div>
+              <div class="modulo-precio">$4,500 <span>MXN / mes</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 2 -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)">
+          <div class="modulo-header">
+            <span class="modulo-num">02</span>
+            <div class="modulo-info">
+              <div class="modulo-title">Checklist Operativo Diario</div>
+              <div class="modulo-tagline">Apertura, limpieza y cierre por sucursal</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-alto">Impacto Alto</span>
+              <span class="badge badge-baja">Complejidad Baja</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Lista de tareas de apertura que el barista completa desde su celular</li>
+                <li>Registro fotográfico de limpieza y mise en place</li>
+                <li>Checklist de cierre con conteo de caja</li>
+                <li>El dueño recibe resumen diario por WhatsApp o email</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">👤 Dueño</span>
+                <span class="beneficia-tag">👥 Empleados</span>
+              </div>
+              <div class="modulo-precio">$1,200 <span>MXN / mes</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 3 -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)">
+          <div class="modulo-header">
+            <span class="modulo-num">03</span>
+            <div class="modulo-info">
+              <div class="modulo-title">Control de Inventario</div>
+              <div class="modulo-tagline">Alertas de stock mínimo por sucursal</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-alto">Impacto Alto</span>
+              <span class="badge badge-media">Complejidad Media</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Registro de entradas y salidas de insumos por sucursal</li>
+                <li>Alertas automáticas cuando un producto está por agotarse</li>
+                <li>Reporte de merma semanal para identificar pérdidas</li>
+                <li>Proyección de compras basada en consumo histórico</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">👤 Dueño</span>
+                <span class="beneficia-tag">📋 Gerente</span>
+              </div>
+              <div class="modulo-precio">$2,800 <span>MXN / mes</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 4 -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)">
+          <div class="modulo-header">
+            <span class="modulo-num">04</span>
+            <div class="modulo-info">
+              <div class="modulo-title">Programa de Lealtad Digital</div>
+              <div class="modulo-tagline">Puntos, recompensas y visitas frecuentes</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-medio">Impacto Medio</span>
+              <span class="badge badge-media">Complejidad Media</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Tarjeta de lealtad digital vía QR o número de teléfono</li>
+                <li>Acumulación de puntos por compra en cualquier sucursal</li>
+                <li>Recompensas configurables: café gratis, descuentos, productos</li>
+                <li>Dashboard de clientes frecuentes y sus hábitos de consumo</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">👤 Dueño</span>
+                <span class="beneficia-tag">☕ Clientes</span>
+              </div>
+              <div class="modulo-precio">$2,200 <span>MXN / mes</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 5 -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)">
+          <div class="modulo-header">
+            <span class="modulo-num">05</span>
+            <div class="modulo-info">
+              <div class="modulo-title">Gestión de Turnos</div>
+              <div class="modulo-tagline">Horarios, ausencias e intercambios</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-medio">Impacto Medio</span>
+              <span class="badge badge-baja">Complejidad Baja</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Calendario semanal de turnos por sucursal visible para todo el equipo</li>
+                <li>Solicitudes de ausencia o cambio de turno desde el celular</li>
+                <li>Notificación automática al gerente cuando hay un hueco en el horario</li>
+                <li>Registro de horas trabajadas para cálculo de nómina</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">👤 Dueño</span>
+                <span class="beneficia-tag">📋 Gerente</span>
+                <span class="beneficia-tag">👥 Empleados</span>
+              </div>
+              <div class="modulo-precio">$1,500 <span>MXN / mes</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 6 -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)">
+          <div class="modulo-header">
+            <span class="modulo-num">06</span>
+            <div class="modulo-info">
+              <div class="modulo-title">Menú Digital con QR</div>
+              <div class="modulo-tagline">Actualizable en tiempo real, sin impresión</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-visible">Impacto Visible</span>
+              <span class="badge badge-baja">Complejidad Baja</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Menú digital accesible desde cualquier celular al escanear el QR de mesa</li>
+                <li>Actualización de precios y disponibilidad desde el admin sin reimprimir</li>
+                <li>Fotos y descripciones de cada bebida y alimento</li>
+                <li>Fin del gasto en menús físicos (~$2,500 MXN/mes en promedio)</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">☕ Clientes</span>
+                <span class="beneficia-tag">👤 Dueño</span>
+              </div>
+              <div class="modulo-precio">$900 <span>MXN / mes</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 7 - ocupa toda la fila -->
+        <div class="modulo-card fade-up" onclick="toggleModulo(this)" style="grid-column: 1 / -1; border-color: var(--gold);">
+          <div class="modulo-header">
+            <span class="modulo-num" style="color:var(--gold);opacity:1;">⭐</span>
+            <div class="modulo-info">
+              <div class="modulo-title" style="color:var(--gold);">Sitio Web de Café Origen</div>
+              <div class="modulo-tagline">Tu presencia digital profesional: productos, galería, sucursales y blog</div>
+            </div>
+            <div class="modulo-badges">
+              <span class="badge badge-alto">Impacto Alto</span>
+              <span class="badge badge-media">Complejidad Media</span>
+            </div>
+            <span class="modulo-chevron">▾</span>
+          </div>
+          <div class="modulo-body">
+            <div class="modulo-body-inner">
+              <ul>
+                <li>Landing page con identidad de marca completa, rápida y mobile-first</li>
+                <li>Sección de menú / productos con fotos, descripciones y precios actualizables</li>
+                <li>Galería de imágenes del lugar, ambiente y preparaciones especiales</li>
+                <li>Mapa con ubicación de las 3 sucursales y horarios de atención</li>
+                <li>Blog "Recomendaciones del barista" para posicionamiento en Google</li>
+                <li>Integración con el programa de lealtad (módulo 4) vía QR desde el sitio</li>
+              </ul>
+              <div class="modulo-beneficia">
+                <span class="beneficia-tag">☕ Clientes nuevos</span>
+                <span class="beneficia-tag">👤 Dueño</span>
+                <span class="beneficia-tag">🔍 Google SEO</span>
+              </div>
+              <div class="modulo-precio">$3,500 <span>MXN setup + $800 / mes mantenimiento</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <script>
     // IntersectionObserver para fade-in al scroll
     const observer = new IntersectionObserver((entries) => {
@@ -398,6 +906,14 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    function toggleModulo(card) {
+      const isOpen = card.classList.contains('open');
+      // cerrar todos
+      document.querySelectorAll('.modulo-card.open').forEach(c => c.classList.remove('open'));
+      // abrir el clickeado si estaba cerrado
+      if (!isOpen) card.classList.add('open');
+    }
   </script>
 </body>
 </html>
