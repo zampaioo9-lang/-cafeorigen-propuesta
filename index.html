@@ -465,6 +465,366 @@
       font-size: 0.8rem;
       color: var(--muted);
     }
+
+    /* SITIO WEB */
+    #sitio-web {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .sitio-web-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      margin-top: 56px;
+    }
+    @media (max-width: 900px) {
+      .sitio-web-layout { grid-template-columns: 1fr; }
+    }
+    .sitio-web-copy h3 {
+      font-size: 1.8rem;
+      color: var(--cream);
+      margin-bottom: 24px;
+    }
+    .sitio-web-list {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .sitio-web-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .sitio-web-list li .ico {
+      color: var(--gold);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    /* Browser mockup wireframe */
+    .browser-mockup {
+      background: #1a1a1a;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+    .browser-bar {
+      background: #222;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .browser-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .browser-url {
+      background: #333;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      flex: 1;
+      text-align: center;
+    }
+    .wireframe-content {
+      padding: 0;
+    }
+    .wf-hero {
+      background: linear-gradient(135deg, #2C1505 0%, #1a0d03 100%);
+      padding: 24px 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    .wf-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .wf-hero-sub { font-size: 0.7rem; color: var(--muted); }
+    .wf-hero-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--gold);
+      color: #000;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 3px;
+    }
+    .wf-products {
+      padding: 16px 20px;
+      border-bottom: 1px solid #333;
+    }
+    .wf-label { font-size: 0.65rem; color: var(--gold); letter-spacing: 2px; margin-bottom: 10px; }
+    .wf-product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .wf-product-card {
+      background: #222;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .wf-product-img {
+      height: 40px;
+      background: linear-gradient(135deg, #3a2510, #2C1505);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    .wf-product-info { padding: 6px; }
+    .wf-product-name { font-size: 0.6rem; color: var(--cream); }
+    .wf-product-price { font-size: 0.6rem; color: var(--gold); margin-top: 2px; }
+    .wf-gallery {
+      padding: 16px 20px;
+      border-bottom: 1px solid #333;
+    }
+    .wf-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+    .wf-gallery-item {
+      height: 36px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #2a1a0a, #1a1a1a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    .wf-sucursales {
+      padding: 16px 20px;
+      border-bottom: 1px solid #333;
+    }
+    .wf-map {
+      height: 60px;
+      background: linear-gradient(135deg, #0a1a0a, #111);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .wf-map-pin { color: var(--gold); }
+    .wf-barista {
+      padding: 16px 20px;
+    }
+    .wf-blog-item {
+      background: #222;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      font-size: 0.65rem;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .wf-blog-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+    /* FASES */
+    #fases { background: var(--surface); border-top: 1px solid var(--border); }
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 64px;
+      position: relative;
+    }
+    @media (max-width: 768px) {
+      .timeline { grid-template-columns: 1fr; }
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 16.67%;
+      right: 16.67%;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold), var(--gold-light), var(--gold));
+      opacity: 0.3;
+    }
+    @media (max-width: 768px) { .timeline::before { display: none; } }
+    .fase {
+      text-align: center;
+      padding: 0 24px;
+      position: relative;
+    }
+    .fase-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      background: var(--surface);
+      position: relative;
+      z-index: 1;
+    }
+    .fase-periodo {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .fase-nombre {
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+    .fase-descripcion {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .fase-modulos {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+    }
+    .fase-modulo-tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 5px 14px;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* INVERSIÓN */
+    #inversion { background: var(--bg); border-top: 1px solid var(--border); }
+    .inversion-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      margin-top: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) { .inversion-layout { grid-template-columns: 1fr; } }
+
+    .precio-tabla { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .precio-fila {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .precio-fila:last-child { border-bottom: none; }
+    .precio-fila:hover { background: var(--surface); }
+    .precio-fila-nombre { font-size: 0.88rem; color: var(--text); }
+    .precio-fila-monto { font-size: 0.88rem; color: var(--gold); font-weight: 500; white-space: nowrap; }
+
+    .combos { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+    .combo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      transition: border-color 0.2s;
+    }
+    .combo-card:hover { border-color: var(--gold); }
+    .combo-card.destacado { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+    .combo-nombre { font-size: 0.95rem; color: var(--cream); margin-bottom: 4px; }
+    .combo-detalle { font-size: 0.78rem; color: var(--muted); }
+    .combo-precio-block { text-align: right; }
+    .combo-precio { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--gold); }
+    .combo-ahorro { font-size: 0.72rem; color: #6bcf9e; margin-top: 2px; }
+
+    .roi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .roi-card h3 { font-size: 1.4rem; color: var(--cream); margin-bottom: 24px; }
+    .roi-fila {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .roi-fila:last-of-type { border-bottom: none; }
+    .roi-concepto { font-size: 0.85rem; color: var(--muted); }
+    .roi-monto { font-size: 0.9rem; color: #6bcf9e; font-weight: 500; }
+    .roi-total {
+      margin-top: 24px;
+      padding: 20px;
+      background: rgba(46,107,79,0.1);
+      border: 1px solid rgba(46,107,79,0.3);
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .roi-total-label { font-size: 0.85rem; color: var(--text); }
+    .roi-total-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #6bcf9e; }
+    .roi-nota { font-size: 0.75rem; color: var(--muted); margin-top: 16px; line-height: 1.5; }
+
+    /* CTA */
+    #contacto {
+      background: linear-gradient(135deg, #0f0a03 0%, #1a0d03 50%, #0a0a0a 100%);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 120px 24px;
+    }
+    #contacto h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--cream); margin-bottom: 16px; }
+    #contacto p { font-size: 1.1rem; color: var(--muted); margin-bottom: 48px; }
+    .contacto-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .contacto-info a {
+      font-size: 1rem;
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contacto-info a:hover { color: var(--gold-light); }
+    .contacto-info span { font-size: 0.85rem; color: var(--muted); }
+
+    /* FOOTER */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer p { font-size: 0.8rem; color: var(--muted); }
+    footer strong { color: var(--gold); }
   </style>
 </head>
 <body>
@@ -894,6 +1254,228 @@
       </div>
     </div>
   </section>
+
+  <section id="sitio-web" class="section">
+    <div class="container">
+      <p class="section-label fade-up">Módulo estrella</p>
+      <h2 class="section-title fade-up">Tu cafetería, en internet</h2>
+      <div class="divider fade-up"></div>
+
+      <div class="sitio-web-layout">
+        <div class="sitio-web-copy fade-up">
+          <h3>Una presencia digital que trabaja por ti las 24 horas</h3>
+          <ul class="sitio-web-list">
+            <li><span class="ico">☕</span> <span><strong style="color:var(--cream)">Menú digital completo</strong> — tus bebidas, alimentos y precios siempre actualizados con fotos de calidad</span></li>
+            <li><span class="ico">🖼️</span> <span><strong style="color:var(--cream)">Galería de ambiente</strong> — muestra el espacio, la barra, las preparaciones especiales que enamoran a tus clientes</span></li>
+            <li><span class="ico">📍</span> <span><strong style="color:var(--cream)">Mapa de sucursales</strong> — los 3 locales con horarios, dirección y "Cómo llegar" directo a Google Maps</span></li>
+            <li><span class="ico">✍️</span> <span><strong style="color:var(--cream)">Blog del barista</strong> — recomendaciones de origen, métodos de preparación, maridajes — posicionamiento SEO orgánico</span></li>
+            <li><span class="ico">🔗</span> <span><strong style="color:var(--cream)">Integración con lealtad</strong> — los clientes se registran al programa de puntos directo desde el sitio web</span></li>
+          </ul>
+          <div class="modulo-precio" style="font-size:1.6rem;">$3,500 <span>MXN setup</span> + $800 <span>MXN / mes</span></div>
+        </div>
+
+        <div class="browser-mockup fade-up">
+          <div class="browser-bar">
+            <div class="browser-dot" style="background:#ff5f57;"></div>
+            <div class="browser-dot" style="background:#febc2e;"></div>
+            <div class="browser-dot" style="background:#28c840;"></div>
+            <div class="browser-url">cafeorigen.mx</div>
+          </div>
+          <div class="wireframe-content">
+            <div class="wf-hero">
+              <div class="wf-hero-title">Café Origen</div>
+              <div class="wf-hero-sub">Del Origen a la Taza · 3 sucursales en tu ciudad</div>
+              <div class="wf-hero-btn">Ver menú</div>
+            </div>
+            <div class="wf-products">
+              <div class="wf-label">NUESTRO MENÚ</div>
+              <div class="wf-product-grid">
+                <div class="wf-product-card">
+                  <div class="wf-product-img">☕</div>
+                  <div class="wf-product-info">
+                    <div class="wf-product-name">Espresso</div>
+                    <div class="wf-product-price">$45</div>
+                  </div>
+                </div>
+                <div class="wf-product-card">
+                  <div class="wf-product-img">🥛</div>
+                  <div class="wf-product-info">
+                    <div class="wf-product-name">Latte</div>
+                    <div class="wf-product-price">$65</div>
+                  </div>
+                </div>
+                <div class="wf-product-card">
+                  <div class="wf-product-img">🫖</div>
+                  <div class="wf-product-info">
+                    <div class="wf-product-name">Chemex</div>
+                    <div class="wf-product-price">$80</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wf-gallery">
+              <div class="wf-label">GALERÍA</div>
+              <div class="wf-gallery-grid">
+                <div class="wf-gallery-item">🏠</div>
+                <div class="wf-gallery-item">☕</div>
+                <div class="wf-gallery-item">🌿</div>
+                <div class="wf-gallery-item">✨</div>
+              </div>
+            </div>
+            <div class="wf-sucursales">
+              <div class="wf-label">SUCURSALES</div>
+              <div class="wf-map">
+                <span><span class="wf-map-pin">📍</span> Centro</span>
+                <span><span class="wf-map-pin">📍</span> Norte</span>
+                <span><span class="wf-map-pin">📍</span> Sur</span>
+              </div>
+            </div>
+            <div class="wf-barista">
+              <div class="wf-label">RECOMENDACIONES DEL BARISTA</div>
+              <div class="wf-blog-item"><div class="wf-blog-dot"></div>Café de Oaxaca: por qué es diferente</div>
+              <div class="wf-blog-item"><div class="wf-blog-dot"></div>Cómo preparar un V60 perfecto en casa</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fases" class="section">
+    <div class="container">
+      <p class="section-label fade-up">El plan</p>
+      <h2 class="section-title fade-up">Implementación en 3 fases</h2>
+      <div class="divider fade-up"></div>
+      <p class="section-subtitle fade-up">Empezamos rápido con lo que genera impacto inmediato y construimos sobre esa base.</p>
+
+      <div class="timeline">
+        <div class="fase fade-up">
+          <div class="fase-num">1</div>
+          <div class="fase-periodo">Mes 1</div>
+          <div class="fase-nombre">Base operativa</div>
+          <div class="fase-descripcion">Arranque inmediato con los módulos de menor fricción. El equipo los adopta en días.</div>
+          <div class="fase-modulos">
+            <span class="fase-modulo-tag">② Checklist operativo</span>
+            <span class="fase-modulo-tag">⑥ Menú digital QR</span>
+          </div>
+        </div>
+        <div class="fase fade-up">
+          <div class="fase-num">2</div>
+          <div class="fase-periodo">Mes 2 – 3</div>
+          <div class="fase-nombre">Control y visibilidad</div>
+          <div class="fase-descripcion">El dueño tiene su primer dashboard real. Las decisiones de compra dejan de ser a ojo.</div>
+          <div class="fase-modulos">
+            <span class="fase-modulo-tag">① Dashboard multi-sucursal</span>
+            <span class="fase-modulo-tag">③ Control de inventario</span>
+            <span class="fase-modulo-tag">⑤ Gestión de turnos</span>
+          </div>
+        </div>
+        <div class="fase fade-up">
+          <div class="fase-num">3</div>
+          <div class="fase-periodo">Mes 3 – 4</div>
+          <div class="fase-nombre">Crecimiento digital</div>
+          <div class="fase-descripcion">Café Origen aparece en Google, los clientes regresan con incentivos y el sitio web trabaja solo.</div>
+          <div class="fase-modulos">
+            <span class="fase-modulo-tag">⭐ Sitio web</span>
+            <span class="fase-modulo-tag">④ Programa de lealtad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inversion" class="section">
+    <div class="container">
+      <p class="section-label fade-up">La inversión</p>
+      <h2 class="section-title fade-up">Precio y retorno esperado</h2>
+      <div class="divider fade-up"></div>
+
+      <div class="inversion-layout">
+        <div class="fade-up">
+          <h3 style="font-size:1rem;color:var(--muted);letter-spacing:1px;margin-bottom:16px;font-family:'Inter',sans-serif;">MÓDULOS INDIVIDUALES</h3>
+          <div class="precio-tabla">
+            <div class="precio-fila"><span class="precio-fila-nombre">① Dashboard multi-sucursal</span><span class="precio-fila-monto">$4,500/mes</span></div>
+            <div class="precio-fila"><span class="precio-fila-nombre">② Checklist operativo</span><span class="precio-fila-monto">$1,200/mes</span></div>
+            <div class="precio-fila"><span class="precio-fila-nombre">③ Control de inventario</span><span class="precio-fila-monto">$2,800/mes</span></div>
+            <div class="precio-fila"><span class="precio-fila-nombre">④ Programa de lealtad</span><span class="precio-fila-monto">$2,200/mes</span></div>
+            <div class="precio-fila"><span class="precio-fila-nombre">⑤ Gestión de turnos</span><span class="precio-fila-monto">$1,500/mes</span></div>
+            <div class="precio-fila"><span class="precio-fila-nombre">⑥ Menú digital QR</span><span class="precio-fila-monto">$900/mes</span></div>
+            <div class="precio-fila"><span class="precio-fila-nombre">⭐ Sitio web</span><span class="precio-fila-monto">$3,500 setup + $800/mes</span></div>
+          </div>
+
+          <div class="combos" style="margin-top:32px;">
+            <h3 style="font-size:1rem;color:var(--muted);letter-spacing:1px;margin-bottom:4px;font-family:'Inter',sans-serif;">COMBOS RECOMENDADOS</h3>
+            <div class="combo-card destacado">
+              <div>
+                <div class="combo-nombre">⭐ Propuesta estrella</div>
+                <div class="combo-detalle">Dashboard + Checklist + Inventario + Sitio web</div>
+              </div>
+              <div class="combo-precio-block">
+                <div class="combo-precio">$7,800<span style="font-size:0.8rem;font-family:'Inter',sans-serif;color:var(--muted)">/mes</span></div>
+                <div class="combo-ahorro">Ahorro del 22%</div>
+              </div>
+            </div>
+            <div class="combo-card">
+              <div>
+                <div class="combo-nombre">Sistema completo</div>
+                <div class="combo-detalle">Los 7 módulos — cobertura total</div>
+              </div>
+              <div class="combo-precio-block">
+                <div class="combo-precio">$11,900<span style="font-size:0.8rem;font-family:'Inter',sans-serif;color:var(--muted)">/mes</span></div>
+                <div class="combo-ahorro">Ahorro del 30%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="roi-card fade-up">
+          <h3>ROI estimado a 6 meses</h3>
+          <div class="roi-fila">
+            <span class="roi-concepto">Reducción de pérdidas por inventario mal gestionado</span>
+            <span class="roi-monto">+$8,000/mes</span>
+          </div>
+          <div class="roi-fila">
+            <span class="roi-concepto">Incremento en ventas por programa de lealtad</span>
+            <span class="roi-monto">+$12,000/mes</span>
+          </div>
+          <div class="roi-fila">
+            <span class="roi-concepto">Ahorro en menús físicos y reimpresiones</span>
+            <span class="roi-monto">+$2,500/mes</span>
+          </div>
+          <div class="roi-total">
+            <div>
+              <div class="roi-total-label">Retorno mensual estimado</div>
+              <div style="font-size:0.75rem;color:var(--muted);">vs inversión de $11,900 MXN/mes</div>
+            </div>
+            <div class="roi-total-num">$22,500</div>
+          </div>
+          <p class="roi-nota">* Proyección conservadora basada en métricas de cafeterías similares en México. El retorno real varía según el volumen de ventas y la adopción del equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <p class="section-label fade-up" style="justify-content:center;display:flex;">El siguiente paso</p>
+      <h2 class="fade-up">¿Listo para sistematizar<br><em>Café Origen?</em></h2>
+      <p class="fade-up">Agendemos una llamada de 30 minutos sin compromiso para revisar cuál es el mejor punto de partida para tu operación.</p>
+      <div class="contacto-info fade-up">
+        <span>Escríbenos directamente:</span>
+        <a href="mailto:hola@tudominio.com">hola@tudominio.com</a>
+        <a href="https://wa.me/521XXXXXXXXXX">WhatsApp: +52 1 XX XXXX XXXX</a>
+      </div>
+      <a href="mailto:hola@tudominio.com" class="btn-primary fade-up" style="font-size:1rem;padding:18px 48px;">
+        Agendar llamada gratuita →
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>Propuesta preparada para <strong>Café Origen</strong> · 2026 · Todos los precios en MXN + IVA</p>
+    </div>
+  </footer>
 
   <script>
     // IntersectionObserver para fade-in al scroll
